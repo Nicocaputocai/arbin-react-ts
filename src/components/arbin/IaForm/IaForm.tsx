@@ -37,10 +37,11 @@ export function IaForm () {
   const { steps, CurrentStepIndex, step, isFirstStep, isLastStep, back, next } =
   useMultiStepForm([
       <Address {...data} updateFields={updateFields} />,
+      <Ubication {...data} updateFields={updateFields} />,
       <LeafPhoto {...data} updateFields={updateFields} />,
       <ProfilePhoto {...data} updateFields={updateFields} />,
       <Status {...data} updateFields={updateFields} />,
-      <Ubication {...data} updateFields={updateFields} />,
+
     ])
     function onSubmit(e: FormEvent) {
       e.preventDefault()
@@ -78,11 +79,11 @@ export function IaForm () {
         >
           {!isFirstStep && (
             <button type="button" onClick={back}>
-              Back
+              Anterior
             </button>
           )}
             <button type="button" onClick={next}>
-            {isLastStep ? "finish" : "next"}
+            {isLastStep ? "Finalizar" : "Siguiente"}
           </button>
         </div>
       </form>

@@ -16,7 +16,7 @@ return(
         onChange={(e) => updateFields({ Address: e.target.value })}
             />
         <label>Barrio </label>
-        <input autoFocus required type="text" value={NeightboardHood}
+        <input required type="text" value={NeightboardHood}
         onChange={(e) => updateFields({ NeightboardHood: e.target.value })}
             />
     </FormWrapper>
